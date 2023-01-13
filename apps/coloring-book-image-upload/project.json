@@ -1,0 +1,46 @@
+{
+  "name": "coloring-book-image-upload",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/coloring-book-image-upload/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/coloring-book-image-upload",
+        "format": ["cjs"],
+        "main": "apps/coloring-book-image-upload/src/main.ts",
+        "tsConfig": "apps/coloring-book-image-upload/tsconfig.app.json",
+        "assets": ["apps/coloring-book-image-upload/src/assets"]
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/js:node",
+      "options": {
+        "buildTarget": "coloring-book-image-upload:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "coloring-book-image-upload:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/coloring-book-image-upload/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/coloring-book-image-upload/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
