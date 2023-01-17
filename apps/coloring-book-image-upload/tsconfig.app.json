@@ -5,6 +5,6 @@
     "module": "commonjs",
     "types": ["node"]
   },
-  "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"],
-  "include": ["src/**/*.ts"]
+  "exclude": ["jest.config.ts", "coloring-book-upload-image-by-url/**/*.spec.ts", "coloring-book-upload-image-by-url/**/*.test.ts"],
+  "include": ["coloring-book-upload-image-by-url/**/*.ts"]
 }

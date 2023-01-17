@@ -7,8 +7,8 @@
   },
   "include": [
     "jest.config.ts",
-    "src/**/*.test.ts",
-    "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+    "coloring-book-upload-image-by-url/**/*.test.ts",
+    "coloring-book-upload-image-by-url/**/*.spec.ts",
+    "coloring-book-upload-image-by-url/**/*.d.ts"
   ]
 }
